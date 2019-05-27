@@ -12,6 +12,7 @@ public:
     CommandLineParser();
     CommandLineParser(const QString &string);
     void parse(const QString &command);
+    void parse(const std::string &command);
 
     QString getMainCommand() const;
     QStringList getOptions() const;

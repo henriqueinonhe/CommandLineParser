@@ -19,6 +19,11 @@ void CommandLineParser::parse(const QString &command)
     classifyCommands(splitCommandsList);
 }
 
+void CommandLineParser::parse(const string &command)
+{
+    parse(QString(command.data()));
+}
+
 bool CommandLineParser::isSpace(const QChar &character) const
 {
     return character == ' ';
